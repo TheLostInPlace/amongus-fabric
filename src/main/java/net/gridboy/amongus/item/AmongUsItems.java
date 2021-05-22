@@ -19,6 +19,7 @@ public class AmongUsItems implements Initable {
     public static Item EMERGENCY_BUTTON;
     public static Item EMERGENCY_ITEM;
 
+
     protected static Item register(Block block, Item item) {
         return register(Registry.BLOCK.getId(block), item);
     }
