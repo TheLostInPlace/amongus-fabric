@@ -3,5 +3,6 @@
   "block.among_us.test_block": "Test Block",
   "block.among_us.emergency_button": "Emergency Button",
   "item.among_us.emergency_icon": "Emergency Icon",
-  "itemGroup.among_us.among_us": "Among Us"
+  "itemGroup.among_us.among_us": "Among Us",
+  "gui.among_us.callemergency": "Call Emergency Meeting"
 }
