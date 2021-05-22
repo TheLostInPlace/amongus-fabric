@@ -1,5 +1,6 @@
 package net.gridboy.amongus.item;
 
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.gridboy.amongus.block.AmongusBlocks;
 import net.gridboy.amongus.util.init.Initable;
 import net.minecraft.block.Block;
@@ -7,12 +8,16 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
+
+import static net.gridboy.amongus.Amongus.id;
 
 public class AmongUsItems implements Initable {
 
     public static Item TEST_BLOCK;
     public static Item EMERGENCY_BUTTON;
+    public static Item EMERGENCY_ITEM;
 
     protected static Item register(Block block, Item item) {
         return register(Registry.BLOCK.getId(block), item);
@@ -33,7 +38,11 @@ public class AmongUsItems implements Initable {
     public static void init() {
         TEST_BLOCK = register(new BlockItem(AmongusBlocks.TEST_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS).fireproof()));
         EMERGENCY_BUTTON = register(new BlockItem(AmongusBlocks.EMERGENCY_BUTTON_BLOCK, new Item.Settings().fireproof().group(ItemGroup.MISC).maxCount(1)));
+        EMERGENCY_ITEM = register(id("emergency_icon"), new EmergencyItem(new FabricItemSettings()
+                .fireproof()
+                .rarity(Rarity.EPIC)
+                .maxCount(1)
+                .group(ItemGroup.MISC)
+        ));
     }
-
-
 }
