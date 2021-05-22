@@ -1,11 +1,12 @@
 package net.gridboy.amongus.block.entity;
 
+import net.gridboy.amongus.block.AmongusBlocks;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
 
 public class EmergencyButtonBlockEntity extends BlockEntity {
 
-    public EmergencyButtonBlockEntity(BlockEntityType<?> type) {
-        super(type);
+    public EmergencyButtonBlockEntity()
+    {
+        super(AmongusBlocks.EMERGENCY_BUTTON_BLOCK_ENTITY);
     }
 }

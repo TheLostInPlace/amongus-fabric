@@ -12,6 +12,7 @@ import net.minecraft.util.registry.Registry;
 public class AmongUsItems implements Initable {
 
     public static Item TEST_BLOCK;
+    public static Item EMERGENCY_BUTTON;
 
     protected static Item register(Block block, Item item) {
         return register(Registry.BLOCK.getId(block), item);
@@ -31,6 +32,7 @@ public class AmongUsItems implements Initable {
 
     public static void init() {
         TEST_BLOCK = register(new BlockItem(AmongusBlocks.TEST_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS).fireproof()));
+        EMERGENCY_BUTTON = register(new BlockItem(AmongusBlocks.EMERGENCY_BUTTON_BLOCK, new Item.Settings().fireproof().group(ItemGroup.MISC).maxCount(1)));
     }
 
 
