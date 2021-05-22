@@ -19,11 +19,11 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.gridboy.amogus.Amogus"
+      "net.gridboy.amongus.Amongus"
     ]
   },
   "mixins": [
-    "amogus.mixins.json"
+    "amongus.mixins.json"
   ],
 
   "depends": {
