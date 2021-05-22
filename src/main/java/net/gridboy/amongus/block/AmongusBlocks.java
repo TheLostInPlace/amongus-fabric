@@ -1,11 +1,13 @@
 package net.gridboy.amongus.block;
 
 import net.gridboy.amongus.block.entity.EmergencyButtonBlockEntity;
+import net.gridboy.amongus.guis.EButtonSyncGui;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.block.MaterialColor;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.registry.Registry;
 
@@ -19,6 +21,8 @@ public class AmongusBlocks {
     public static Block EMERGENCY_BUTTON_BLOCK;
 
     public static BlockEntityType<EmergencyButtonBlockEntity> EMERGENCY_BUTTON_BLOCK_ENTITY;
+
+    public static ScreenHandlerType<EButtonSyncGui> ebuttonBlockScreen;
 
     static {
         TEST_BLOCK = register("test_block", new AmongusTestBlock(AbstractBlock.Settings.of(Material.METAL, MaterialColor.IRON).requiresTool().strength(1f, 1f).sounds(BlockSoundGroup.METAL)));

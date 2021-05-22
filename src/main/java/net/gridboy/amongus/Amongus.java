@@ -2,6 +2,10 @@ package net.gridboy.amongus;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
+import net.gridboy.amongus.block.AmongusBlocks;
+import net.gridboy.amongus.block.EmergencyButtonBlock;
+import net.gridboy.amongus.guis.EButtonSyncGui;
 import net.gridboy.amongus.item.AmongusItems;
 import net.gridboy.amongus.util.init.Initable;
 import net.minecraft.item.ItemGroup;
@@ -34,6 +38,8 @@ public class Amongus implements ModInitializer {
 		Initable.initClasses(AmongusItems.class);
 
 		Registry.register(Registry.SOUND_EVENT, SUS_ID, SUS_EVENT);
+
+		AmongusBlocks.ebuttonBlockScreen = ScreenHandlerRegistry.registerSimple(EmergencyButtonBlock.ID, (syncId, inventory) -> new EButtonSyncGui(AmongusBlocks.ebuttonBlockScreen, syncId, inventory));
 
 		System.out.println("Sus");
 	}
