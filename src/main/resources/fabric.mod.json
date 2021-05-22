@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "amogus",
+  "id": "amongus",
   "version": "${version}",
 
   "name": "Among Us - Fabric",
@@ -14,7 +14,7 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/amogus/icon.png",
+  "icon": "assets/amongus/icon.png",
 
   "environment": "*",
   "entrypoints": {
