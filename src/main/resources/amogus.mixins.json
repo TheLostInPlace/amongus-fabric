@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.gridboy.amogus.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "AmogusMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

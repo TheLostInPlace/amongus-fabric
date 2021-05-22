@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "amogus",
+  "version": "${version}",
+
+  "name": "Among Us - Fabric",
+  "description": "This mod aims to add the Among Us experience to Minecraft.",
+  "authors": [
+    "Gridboy"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/amogus/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.gridboy.amogus.Amogus"
+    ]
+  },
+  "mixins": [
+    "amogus.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
