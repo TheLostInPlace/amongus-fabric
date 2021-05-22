@@ -6,18 +6,19 @@ import net.gridboy.amongus.util.init.Initable;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
+import static net.gridboy.amongus.Amongus.AMONGUS_GROUP;
 import static net.gridboy.amongus.Amongus.id;
 
-public class AmongUsItems implements Initable {
+public class AmongusItems implements Initable {
 
     public static Item TEST_BLOCK;
     public static Item EMERGENCY_BUTTON;
     public static Item EMERGENCY_ITEM;
+    public static Item TEST_ITEM;
 
 
     protected static Item register(Block block, Item item) {
@@ -37,13 +38,16 @@ public class AmongUsItems implements Initable {
     }
 
     public static void init() {
-        TEST_BLOCK = register(new BlockItem(AmongusBlocks.TEST_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS).fireproof()));
-        EMERGENCY_BUTTON = register(new BlockItem(AmongusBlocks.EMERGENCY_BUTTON_BLOCK, new Item.Settings().fireproof().group(ItemGroup.MISC).maxCount(1)));
+        TEST_BLOCK = register(new BlockItem(AmongusBlocks.TEST_BLOCK, new Item.Settings().group(AMONGUS_GROUP).fireproof()));
+        EMERGENCY_BUTTON = register(new BlockItem(AmongusBlocks.EMERGENCY_BUTTON_BLOCK, new Item.Settings().fireproof().group(AMONGUS_GROUP).maxCount(1)));
         EMERGENCY_ITEM = register(id("emergency_icon"), new EmergencyItem(new FabricItemSettings()
                 .fireproof()
                 .rarity(Rarity.EPIC)
                 .maxCount(1)
-                .group(ItemGroup.MISC)
+                .group(AMONGUS_GROUP)
         ));
+        TEST_ITEM = register(id("test_item"), new AmongusTestItem(new FabricItemSettings()
+        .group(AMONGUS_GROUP)
+        .maxCount(1)));
     }
 }

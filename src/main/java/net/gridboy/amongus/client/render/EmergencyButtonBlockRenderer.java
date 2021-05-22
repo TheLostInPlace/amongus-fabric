@@ -3,7 +3,7 @@ package net.gridboy.amongus.client.render;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.gridboy.amongus.block.entity.EmergencyButtonBlockEntity;
-import net.gridboy.amongus.item.AmongUsItems;
+import net.gridboy.amongus.item.AmongusItems;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -18,7 +18,7 @@ import net.minecraft.item.ItemStack;
 @Environment(EnvType.CLIENT)
 public class EmergencyButtonBlockRenderer extends BlockEntityRenderer<EmergencyButtonBlockEntity> {
 
-    private static final ItemStack EMERGENCY_ICON = new ItemStack(AmongUsItems.EMERGENCY_ITEM, 1);
+    private static final ItemStack EMERGENCY_ICON = new ItemStack(AmongusItems.EMERGENCY_ITEM, 1);
 
     public EmergencyButtonBlockRenderer(BlockEntityRenderDispatcher dispatcher)
     {
