@@ -16,6 +16,7 @@ public class AmongusTestItem extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
         playerEntity.playSound(Amongus.SUS_EVENT, 1.0F, 1.0F);
+        playerEntity.kill();
         return TypedActionResult.success(playerEntity.getStackInHand(hand));
     }
 }

@@ -49,5 +49,6 @@ public class AmongusItems implements Initable {
         TEST_ITEM = register(id("test_item"), new AmongusTestItem(new FabricItemSettings()
         .group(AMONGUS_GROUP)
         .maxCount(1)));
+
     }
 }

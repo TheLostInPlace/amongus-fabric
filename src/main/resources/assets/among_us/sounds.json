@@ -1,9 +1,8 @@
-    {
-      "among_us": {
-        "subtitle": "subtitles.among_us.sus",
-        "sounds": [
-          "among_us:amogus"
-        ]
-      }
-    }
+{
+  "amogus": {
+    "sounds": [
+      "among_us:amogus"
+    ]
+  }
+}
 
