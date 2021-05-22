@@ -6,7 +6,9 @@ import net.gridboy.amongus.item.AmongusItems;
 import net.gridboy.amongus.util.init.Initable;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 
 public class Amongus implements ModInitializer {
 
@@ -21,12 +23,17 @@ public class Amongus implements ModInitializer {
 			.icon(() -> new ItemStack(AmongusItems.TEST_ITEM))
 			.build();
 
+	public static final Identifier SUS_ID = new Identifier("among_us:amogus");
+	public static SoundEvent SUS_EVENT = new SoundEvent(SUS_ID);
+
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 		Initable.initClasses(AmongusItems.class);
+
+		Registry.register(Registry.SOUND_EVENT, SUS_ID, SUS_EVENT);
 
 		System.out.println("Sus");
 	}
