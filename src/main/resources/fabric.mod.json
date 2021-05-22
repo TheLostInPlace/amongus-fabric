@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "amongus",
+  "id": "among_us",
   "version": "${version}",
 
   "name": "Among Us - Fabric",
@@ -10,16 +10,19 @@
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/TheLostInPlace/amongus-fabric"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/amongus/icon.png",
+  "icon": "assets/among_us/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
       "net.gridboy.amongus.Amongus"
+    ],
+    "client": [
+      "net.gridboy.amongus.AmongusClient"
     ]
   },
   "mixins": [
