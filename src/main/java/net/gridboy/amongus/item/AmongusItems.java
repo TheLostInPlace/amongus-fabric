@@ -19,6 +19,7 @@ public class AmongusItems implements Initable {
     public static Item EMERGENCY_BUTTON;
     public static Item EMERGENCY_ITEM;
     public static Item TEST_ITEM;
+    public static Item VENT_BLOCK;
 
 
     protected static Item register(Block block, Item item) {
@@ -49,6 +50,6 @@ public class AmongusItems implements Initable {
         TEST_ITEM = register(id("test_item"), new AmongusTestItem(new FabricItemSettings()
         .group(AMONGUS_GROUP)
         .maxCount(1)));
-
+        VENT_BLOCK = register(new BlockItem(AmongusBlocks.VENT_BLOCK, new Item.Settings().group(AMONGUS_GROUP).fireproof()));
     }
 }

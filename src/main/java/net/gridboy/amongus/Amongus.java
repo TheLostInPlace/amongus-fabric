@@ -30,6 +30,9 @@ public class Amongus implements ModInitializer {
 	public static final Identifier SUS_ID = new Identifier("among_us:amogus");
 	public static SoundEvent SUS_EVENT = new SoundEvent(SUS_ID);
 
+	public static final Identifier EME_ID = new Identifier(("among_us:emergency"));
+	public static SoundEvent EME_EVENT = new SoundEvent(EME_ID);
+
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -38,6 +41,7 @@ public class Amongus implements ModInitializer {
 		Initable.initClasses(AmongusItems.class);
 
 		Registry.register(Registry.SOUND_EVENT, SUS_ID, SUS_EVENT);
+		Registry.register(Registry.SOUND_EVENT, EME_ID, EME_EVENT);
 
 		AmongusBlocks.ebuttonBlockScreen = ScreenHandlerRegistry.registerSimple(EmergencyButtonBlock.ID, (syncId, inventory) -> new EButtonSyncGui(AmongusBlocks.ebuttonBlockScreen, syncId, inventory));
 

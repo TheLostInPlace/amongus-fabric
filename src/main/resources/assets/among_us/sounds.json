@@ -1,8 +1,12 @@
 {
-  "amogus": {
-    "sounds": [
-      "among_us:amogus"
-    ]
-  }
+	"amogus": {
+		"sounds": [
+			"among_us:amogus"
+		]
+	},
+	"emergency": {
+		"sounds": [
+			"among_us:emergency"
+		]
+	}
 }
-
