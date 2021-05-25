@@ -4,6 +4,7 @@ import net.gridboy.amongus.block.entity.EmergencyButtonBlockEntity;
 import net.gridboy.amongus.block.entity.VentBlockEntity;
 import net.gridboy.amongus.block.entity.WireTaskBlockEntity;
 import net.gridboy.amongus.guis.EButtonController;
+import net.gridboy.amongus.guis.WireTaskController;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
@@ -33,6 +34,8 @@ public class AmongusBlocks {
     public static BlockEntityType<WireTaskBlockEntity> WIRE_TASK_BLOCK_ENTITY;
 
     public static ScreenHandlerType<EButtonController> ebuttonBlockScreen;
+
+    public static ScreenHandlerType<WireTaskController> wireTaskControllerScreenHandler;
 
     static {
         TEST_BLOCK = register("test_block", new AmongusTestBlock(AbstractBlock.Settings.of(Material.METAL, MaterialColor.IRON).requiresTool().strength(1f, 1f).sounds(BlockSoundGroup.METAL)));

@@ -31,6 +31,7 @@ public class VentBlock extends BlockWithEntity implements BlockEntityProvider {
         if (!world.isClient) {
             player.sendMessage(new LiteralText("Vent clicked."), false);
             //MinecraftClient.getInstance().openScreen(new EButtonScreen(new EButtonGui()));
+            //player.openHandledScreen(state.createScreenHandlerFactory(world, pos));
         }
 
         return ActionResult.SUCCESS;

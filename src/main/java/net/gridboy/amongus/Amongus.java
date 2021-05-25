@@ -5,7 +5,9 @@ import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.gridboy.amongus.block.AmongusBlocks;
 import net.gridboy.amongus.block.EmergencyButtonBlock;
+import net.gridboy.amongus.block.WireTaskBlock;
 import net.gridboy.amongus.guis.EButtonController;
+import net.gridboy.amongus.guis.WireTaskController;
 import net.gridboy.amongus.item.AmongusItems;
 import net.gridboy.amongus.util.init.Initable;
 import net.minecraft.item.ItemGroup;
@@ -42,6 +44,8 @@ public class Amongus implements ModInitializer {
 
 		Registry.register(Registry.SOUND_EVENT, SUS_ID, SUS_EVENT);
 		Registry.register(Registry.SOUND_EVENT, EME_ID, EME_EVENT);
+
+		AmongusBlocks.wireTaskControllerScreenHandler = ScreenHandlerRegistry.registerSimple(WireTaskBlock.ID, (syncId, inventory) -> new WireTaskController(AmongusBlocks.wireTaskControllerScreenHandler, syncId, inventory));
 
 		AmongusBlocks.ebuttonBlockScreen = ScreenHandlerRegistry.registerSimple(EmergencyButtonBlock.ID, (syncId, inventory) -> new EButtonController(AmongusBlocks.ebuttonBlockScreen, syncId, inventory));
 

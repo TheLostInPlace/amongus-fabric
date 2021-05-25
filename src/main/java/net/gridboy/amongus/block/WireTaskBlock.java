@@ -23,7 +23,7 @@ public class WireTaskBlock extends BlockWithEntity {
         super(settings);
     }
 
-    public Identifier ID = new Identifier("amongus", "wire_task_block");
+    public static Identifier ID = new Identifier("amongus", "wire_task_block");
 
     @Override
     public BlockEntity createBlockEntity(BlockView blockView) {
@@ -34,6 +34,7 @@ public class WireTaskBlock extends BlockWithEntity {
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (!world.isClient) {
             player.sendMessage(new LiteralText("Wire task activated."), false);
+            player.openHandledScreen(state.createScreenHandlerFactory(world, pos));
         }
 
         return ActionResult.SUCCESS;
