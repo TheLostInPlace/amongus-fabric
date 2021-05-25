@@ -21,6 +21,7 @@ public class AmongusItems implements Initable {
     public static Item TEST_ITEM;
     public static Item VENT_BLOCK;
     public static Item WIRE_TASK_BLOCK;
+    public static Item STORAGE_BLOCK;
 
 
     protected static Item register(Block block, Item item) {
@@ -53,5 +54,6 @@ public class AmongusItems implements Initable {
         .maxCount(1)));
         VENT_BLOCK = register(new BlockItem(AmongusBlocks.VENT_BLOCK, new Item.Settings().group(AMONGUS_GROUP).fireproof()));
         WIRE_TASK_BLOCK = register(new BlockItem(AmongusBlocks.WIRE_TASK_BLOCK, new Item.Settings().group(AMONGUS_GROUP)));
+        STORAGE_BLOCK = register(new BlockItem(AmongusBlocks.STORAGE_BLOCK, new Item.Settings().group(AMONGUS_GROUP)));
     }
 }

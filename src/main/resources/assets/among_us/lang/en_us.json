@@ -4,8 +4,10 @@
   "block.among_us.emergency_button": "Emergency Button",
   "block.among_us.vent_block": "Vent",
   "block.among_us.wire_task_block": "Wire Task Block",
+  "block.among_us.storage_block": "Storage Block",
   "item.among_us.emergency_icon": "Emergency Icon",
   "itemGroup.among_us.among_us": "Among Us",
   "gui.among_us.callemergency": "Call Emergency Meeting",
-  "gui.among_us.wire_task_screen": "Wire Task"
+  "gui.among_us.wire_task_screen": "Wire Task",
+  "block.among_us.storage_block.tooltip": "Cosmetic only"
 }

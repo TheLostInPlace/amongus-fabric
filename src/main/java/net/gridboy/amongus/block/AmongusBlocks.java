@@ -27,6 +27,8 @@ public class AmongusBlocks {
 
     public static Block WIRE_TASK_BLOCK;
 
+    public static Block STORAGE_BLOCK;
+
     public static BlockEntityType<EmergencyButtonBlockEntity> EMERGENCY_BUTTON_BLOCK_ENTITY;
 
     public static BlockEntityType<VentBlockEntity> VENT_BLOCK_ENTITY;
@@ -38,6 +40,7 @@ public class AmongusBlocks {
     public static ScreenHandlerType<WireTaskController> wireTaskControllerScreenHandler;
 
     static {
+        STORAGE_BLOCK = register("storage_block", new StorageBlock(AbstractBlock.Settings.of(Material.METAL, MaterialColor.WHITE).dropsNothing().requiresTool()));
         TEST_BLOCK = register("test_block", new AmongusTestBlock(AbstractBlock.Settings.of(Material.METAL, MaterialColor.IRON).requiresTool().strength(1f, 1f).sounds(BlockSoundGroup.METAL)));
         EMERGENCY_BUTTON_BLOCK = register("emergency_button", new EmergencyButtonBlock(AbstractBlock.Settings.of(Material.STONE, MaterialColor.RED).requiresTool().strength(1f, 1f).sounds((BlockSoundGroup.LODESTONE)).nonOpaque()));
         EMERGENCY_BUTTON_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, MOD_ID + "emergency_button", BlockEntityType.Builder.create(EmergencyButtonBlockEntity::new, EMERGENCY_BUTTON_BLOCK).build(null));
