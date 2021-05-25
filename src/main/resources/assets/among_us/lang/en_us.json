@@ -6,5 +6,6 @@
   "block.among_us.wire_task_block": "Wire Task Block",
   "item.among_us.emergency_icon": "Emergency Icon",
   "itemGroup.among_us.among_us": "Among Us",
-  "gui.among_us.callemergency": "Call Emergency Meeting"
+  "gui.among_us.callemergency": "Call Emergency Meeting",
+  "gui.among_us.wire_task_screen": "Wire Task"
 }

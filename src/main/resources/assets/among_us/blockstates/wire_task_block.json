@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "among_us:block/wire_task_block" },
+        "facing=south": { "model": "among_us:block/wire_task_block", "y": 180},
+        "facing=west":  { "model": "among_us:block/wire_task_block", "y": 270 },
+        "facing=east":  { "model": "among_us:block/wire_task_block", "y": 90 }
+    }
+}

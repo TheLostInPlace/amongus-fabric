@@ -2,7 +2,7 @@ package net.gridboy.amongus.block.entity;
 
 
 import net.gridboy.amongus.block.AmongusBlocks;
-import net.gridboy.amongus.guis.EButtonController;
+import net.gridboy.amongus.guis.WireTaskController;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -21,11 +21,11 @@ public class WireTaskBlockEntity extends BlockEntity implements NamedScreenHandl
 
     @Override
     public Text getDisplayName() {
-        return new TranslatableText(getCachedState().getBlock().getTranslationKey());
+        return new TranslatableText("gui.among_us.wire_task_screen");
     }
 
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory inventory, PlayerEntity player) {
-        return new EButtonController(AmongusBlocks.wireTaskControllerScreenHandler, syncId, inventory);
+        return new WireTaskController(AmongusBlocks.wireTaskControllerScreenHandler, syncId, inventory);
     }
 }
