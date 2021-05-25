@@ -2,6 +2,7 @@ package net.gridboy.amongus;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.gridboy.amongus.block.AmongusBlocks;
 import net.gridboy.amongus.block.EmergencyButtonBlock;
@@ -10,6 +11,7 @@ import net.gridboy.amongus.guis.EButtonController;
 import net.gridboy.amongus.guis.WireTaskController;
 import net.gridboy.amongus.item.AmongusItems;
 import net.gridboy.amongus.util.init.Initable;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
@@ -35,7 +37,7 @@ public class Amongus implements ModInitializer {
 	public static final Identifier EME_ID = new Identifier(("among_us:emergency"));
 	public static SoundEvent EME_EVENT = new SoundEvent(EME_ID);
 
-
+	public static int ticks = 0;
 
 	@Override
 	public void onInitialize() {
@@ -46,6 +48,18 @@ public class Amongus implements ModInitializer {
 
 		Registry.register(Registry.SOUND_EVENT, SUS_ID, SUS_EVENT);
 		Registry.register(Registry.SOUND_EVENT, EME_ID, EME_EVENT);
+
+		ServerTickEvents.END_SERVER_TICK.register(server -> {
+					ticks++;
+					if (ticks == 200) {
+
+						PlayerEntity player = server.getPlayerManager().getPlayer("Gridboy");
+						//server.sendSystemMessage(new LiteralText("10 seconds have passed."), Util.NIL_UUID);
+						//player.sendSystemMessage(new LiteralText("10 seconds have passed."), player.getUuid());
+						ticks = 0;
+
+					}
+				});
 
 		AmongusBlocks.wireTaskControllerScreenHandler = ScreenHandlerRegistry.registerSimple(WireTaskBlock.ID, (syncId, inventory) -> new WireTaskController(AmongusBlocks.wireTaskControllerScreenHandler, syncId, inventory));
 

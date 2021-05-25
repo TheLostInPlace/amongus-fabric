@@ -32,6 +32,9 @@ public class EButtonController extends SyncedGuiDescription {
             playerInventory.player.playSound(Amongus.EME_EVENT, 1.0F, 1.0F);
         });
 
+        //WTextField text_box = new WTextField(new LiteralText("Replace me!"));
+        //root.add(text_box, 3, 8, 6, 2);
+
         root.validate(this);
     }
 }

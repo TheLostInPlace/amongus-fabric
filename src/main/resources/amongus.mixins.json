@@ -4,6 +4,7 @@
   "package": "net.gridboy.amongus.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "EliminateWanderingTraderMixin"
   ],
   "client": [
     "AmongusMixin"
