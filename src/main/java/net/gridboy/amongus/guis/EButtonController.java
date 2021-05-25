@@ -12,6 +12,7 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
 
 public class EButtonController extends SyncedGuiDescription {
+
     public EButtonController(ScreenHandlerType<?> type, int syncId, PlayerInventory playerInventory) {
         super(type, syncId, playerInventory);
 
