@@ -36,6 +36,7 @@ public class Amongus implements ModInitializer {
 	public static SoundEvent EME_EVENT = new SoundEvent(EME_ID);
 
 
+
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
