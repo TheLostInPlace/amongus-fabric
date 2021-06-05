@@ -2,7 +2,8 @@ package net.gridboy.amongus.guis;
 
 import io.github.cottonmc.cotton.gui.SyncedGuiDescription;
 import io.github.cottonmc.cotton.gui.widget.WGridPanel;
-import io.github.cottonmc.cotton.gui.widget.WTextField;
+import io.github.cottonmc.cotton.gui.widget.WToggleButton;
+import net.gridboy.amongus.widgets.WWireWidget;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.text.LiteralText;
@@ -17,11 +18,15 @@ public class WireTaskController extends SyncedGuiDescription {
         root.setSize(256, 256);
 
 
-        //WToggleButton wire_1 = new WToggleButton(new LiteralText("Wire 1"));
-        //root.add(wire_1, 5, 5);
+        WToggleButton wire_1 = new WToggleButton(new LiteralText("Wire 1"));
+        root.add(wire_1, 5, 5);
 
-        WTextField text_box = new WTextField(new LiteralText("Replace me!"));
-        root.add(text_box, 3, 8, 6, 2);
+        WWireWidget wire_test = new WWireWidget();
+        wire_test.setSize(1, 1);
+        root.add(wire_test, 0, 0);
+
+        //WTextField text_box = new WTextField(new LiteralText("Replace me!"));
+        //root.add(text_box, 3, 8, 6, 2);
 
         root.validate(this);
     }
